@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Paul's Blog</title>
+  </head>
+  <style type="text/css">
+  </style>
+<body>
+<h1>Paul's Blog</h1>
+<div class="blog">
+{% for entry in entries %}
+  <div class="entry">
+    <h2>{{ entry.title }}</h2>
+    {{entry.text|safe}}
+  </div>
+{% endfor %}
+</div>
+</body>

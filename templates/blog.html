@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Paul's Blog</title>
+    <style type="text/css">
+    </style>
+  </head>
+  <body>
+    <h1>Paul's Blog</h1>
+    <div class="blog">
+      {% for entry in entries %}
+      {{ entry['html_body']|safe }}
+      {% endfor %}
+    </div>
+  </body>
+</html>
+
