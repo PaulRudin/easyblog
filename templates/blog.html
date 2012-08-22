@@ -1,12 +1,12 @@
 <!doctype html>
 <html>
   <head>
-    <title>Paul's Blog</title>
-    <style type="text/css">
-    </style>
+    <title>{{ title }}</title>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    {{ stylesheet|safe }}
   </head>
   <body>
-    <h1>Paul's Blog</h1>
+    <h1>{{ title }}</h1>
     <div class="blog">
       {% for entry in entries %}
       {{ entry['html_body']|safe }}
